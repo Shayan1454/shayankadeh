@@ -1,48 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>شایان کده</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: Tahoma, sans-serif;
-      background-color: #f3f3f3;
+      font-family: 'Vazir', sans-serif;
+      margin: 0;
+      background: #f4f7f9;
       direction: rtl;
-      padding: 20px;
     }
     header {
-      background-color: #008080;
+      background: linear-gradient(135deg, #26a69a, #00796b);
       color: white;
-      padding: 10px;
       text-align: center;
-      border-radius: 10px;
+      padding: 40px 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
     }
     nav {
-      margin: 20px 0;
-      background-color: #e0f7fa;
-      padding: 10px;
-      border-radius: 10px;
       text-align: center;
+      background-color: #e0f2f1;
+      padding: 15px;
+      border-radius: 15px;
+      margin: 20px auto;
+      max-width: 960px;
     }
     nav a {
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
-      color: #006666;
       font-weight: bold;
+      color: #00695c;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #004d40;
+    }
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
     }
     section {
-      background-color: white;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #004d40;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .download-link {
+      background: #26a69a;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .download-link:hover {
+      background: #00796b;
     }
     footer {
       text-align: center;
-      margin-top: 30px;
       color: #666;
+      font-size: 0.9rem;
+      padding: 20px;
+    }
+    form textarea, form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+    form button {
+      background: #26a69a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #00796b;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    @media(max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -60,57 +141,79 @@
     <a href="#motaleat">مطالعات</a>
     <a href="#payamha">پیام‌های آسمان</a>
     <a href="#poem">شعر</a>
+    <a href="#gallery">عکس‌ها</a>
+    <a href="#links">لینک‌های مفید</a>
+    <a href="#contact">پیام شما</a>
   </nav>
 
-  <section id="math">
-    <h2>ریاضی</h2>
-    <ul>
-      <li><a href="riyazi-1.pdf" download>دانلود نمونه سوال ریاضی ۱</a></li>
-    </ul>
-  </section>
-
-  <section id="farsi">
-    <h2>فارسی</h2>
-    <ul>
-      <li><a href="farsi-1.pdf" download>دانلود نمونه سوال فارسی ۱</a></li>
-    </ul>
-  </section>
-
-  <section id="quran">
-    <h2>قرآن</h2>
-    <ul>
-      <li><a href="quran-1.pdf" download>دانلود نمونه سوال قرآن ۱</a></li>
-    </ul>
-  </section>
-
-  <section id="oloum">
-    <h2>علوم</h2>
-    <ul>
-      <li><a href="oloum-1.pdf" download>دانلود نمونه سوال علوم ۱</a></li>
-    </ul>
-  </section>
-
-  <section id="motaleat">
-    <h2>مطالعات</h2>
-    <ul>
-      <li><a href="motaleat-1.pdf" download>دانلود نمونه سوال مطالعات ۱</a></li>
-    </ul>
-  </section>
-
-  <section id="payamha">
-    <h2>پیام‌های آسمان</h2>
-    <ul>
-      <li><a href="payamha-1.pdf" download>دانلود نمونه سوال پیام‌های آسمان ۱</a></li>
-    </ul>
-  </section>
-
-  <section id="poem">
-    <h2>شعر</h2>
-    <p>در این بخش شعر توسط مدیر سایت بارگذاری می‌شود.</p>
-  </section>
+  <main>
+    <section id="math">
+      <h2>ریاضی</h2>
+      <ul>
+        <li><a class="download-link" href="riyazi-1.pdf" download><i class="fas fa-file-download"></i> دانلود نمونه سوال ریاضی ۱</a></li>
+      </ul>
+    </section>
+    <section id="farsi">
+      <h2>فارسی</h2>
+      <ul>
+        <li><a class="download-link" href="farsi-1.pdf" download><i class="fas fa-file-download"></i> دانلود نمونه سوال فارسی ۱</a></li>
+      </ul>
+    </section>
+    <section id="quran">
+      <h2>قرآن</h2>
+      <ul>
+        <li><a class="download-link" href="quran-1.pdf" download><i class="fas fa-file-download"></i> دانلود نمونه سوال قرآن ۱</a></li>
+      </ul>
+    </section>
+    <section id="oloum">
+      <h2>علوم</h2>
+      <ul>
+        <li><a class="download-link" href="oloum-1.pdf" download><i class="fas fa-file-download"></i> دانلود نمونه سوال علوم ۱</a></li>
+      </ul>
+    </section>
+    <section id="motaleat">
+      <h2>مطالعات</h2>
+      <ul>
+        <li><a class="download-link" href="motaleat-1.pdf" download><i class="fas fa-file-download"></i> دانلود نمونه سوال مطالعات ۱</a></li>
+      </ul>
+    </section>
+    <section id="payamha">
+      <h2>پیام‌های آسمان</h2>
+      <ul>
+        <li><a class="download-link" href="payamha-1.pdf" download><i class="fas fa-file-download"></i> دانلود نمونه سوال پیام‌های آسمان ۱</a></li>
+      </ul>
+    </section>
+    <section id="poem">
+      <h2>شعر</h2>
+      <p>در این بخش شعر توسط مدیر سایت بارگذاری می‌شود.</p>
+    </section>
+    <section id="gallery">
+      <h2>گالری عکس‌ها</h2>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="عکس ۱">
+        <img src="photo2.jpg" alt="عکس ۲">
+        <img src="photo3.jpg" alt="عکس ۳">
+      </div>
+    </section>
+    <section id="links">
+      <h2>لینک‌های مفید</h2>
+      <ul>
+        <li><a href="https://gama.ir" target="_blank">سایت گاما</a></li>
+        <li><a href="https://bama.ir" target="_blank">سایت باما</a></li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>پیام شما</h2>
+      <form>
+        <input type="text" placeholder="نام شما">
+        <textarea rows="4" placeholder="پیام شما..."></textarea>
+        <button type="submit">ارسال پیام</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>طراحی شده توسط شایان</p>
+    طراحی شده توسط شایان ❤️ ۲۰۲۵
   </footer>
 </body>
 </html>
